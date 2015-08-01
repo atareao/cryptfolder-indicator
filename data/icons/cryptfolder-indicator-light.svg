@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3215"
+   height="22"
+   width="22"
+   version="1.0"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="cryptfolder-indicator-light.svg">
+  <defs
+     id="defs8">
+    <linearGradient
+       id="linearGradient3765">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.31137726;"
+         offset="0"
+         id="stop3767" />
+      <stop
+         style="stop-color:#3c3c3c;stop-opacity:1;"
+         offset="1"
+         id="stop3769" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="1000"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="18.449059"
+     inkscape:cx="8.6464531"
+     inkscape:cy="7.9337979"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3215" />
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:none;stroke:#cccccc;stroke-width:1.78200006000000011;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+     d="m 13.713,11.834624 0,-5.0430558 c 0,-1.5276168 -1.203368,-2.7659948 -2.670364,-2.7659948 -1.466998,0 -2.756636,1.238378 -2.756636,2.7659948 l 0,5.0430558"
+     id="path2984"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccscc" />
+  <rect
+     style="fill:#cccccc;fill-opacity:1;stroke:none"
+     id="rect3755"
+     width="10.53"
+     height="7.2900004"
+     x="5.7350001"
+     y="11.834624"
+     ry="1.2238686"
+     rx="1.8030822" />
+</svg>

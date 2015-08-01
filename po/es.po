@@ -1,0 +1,252 @@
+# Spanish translations for PACKAGE package.
+# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>, 2011.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: cryptfolder-indicator 0.5.0\n"
+"Report-Msgid-Bugs-To: lorenzo.carbonell.cerezo@gmail.com\n"
+"POT-Creation-Date: 2013-05-11 10:25+0200\n"
+"PO-Revision-Date: 2011-12-29 18:46+0000\n"
+"Last-Translator: Lorenzo Carbonell <Unknown>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Generator: Launchpad (build 15544)\n"
+"X-Launchpad-Export-Date: 2012-07-04 06:12+0000\n"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:86
+msgid "Web..."
+msgstr "Web..."
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:87
+msgid "Get help online..."
+msgstr "Obtener ayuda en línea..."
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:88
+msgid "Translate this application..."
+msgstr "Traducir esta aplicación..."
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:89
+msgid "Report a bug..."
+msgstr "Informar de un problema..."
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:91
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:97
+msgid "About"
+msgstr "Acerca de"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:92
+msgid "Homepage"
+msgstr ""
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:93
+msgid "Follow us in Twitter"
+msgstr ""
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:94
+msgid "Follow us in Google+"
+msgstr ""
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:95
+msgid "Follow us in Facebook"
+msgstr ""
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:117
+msgid "Unmounted"
+msgstr "Desmontado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:120
+msgid "Not unmounted"
+msgstr "Sin montar"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:125
+msgid "Mounted"
+msgstr "Montado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:128
+msgid "Not mounted"
+msgstr "Sin montar"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:153
+msgid "Edit crypt folders"
+msgstr "Editar directorios cifrados"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:154
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:45
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:156
+msgid "Help"
+msgstr "Ayuda"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:160
+msgid "Exit"
+msgstr "Salir"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/cryptfolder_indicator.py:237
+msgid "An indicator for crypt folders with encfs"
+msgstr "Un indicador para directorios cifrados con encfs"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:63
+msgid "This is already a crypted folder"
+msgstr "Este directorio ya está cifrado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:68
+msgid "The password is wrong"
+msgstr "La contraseña no es correcta"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:72
+msgid "Mount point already in use"
+msgstr "El punto de montaje está en uso"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:75
+msgid "Password can not be null"
+msgstr "La contraseña no puede estar vacía"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:85
+msgid "This folder is already opened"
+msgstr "Este directorio ya está abierto"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:95
+msgid "This folder is not opened"
+msgstr "Este directorio no está abierto"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:99
+msgid "Not unmount"
+msgstr "No se ha montado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:103
+msgid "No loopback device available"
+msgstr "No hay ningún equipo disponible"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/gnomeencfsmod.py:108
+msgid "This is not a folder"
+msgstr "Esto no es un directorio"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:64
+msgid "Autostart"
+msgstr "Inicio automático"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:66
+msgid "Mount selected folders at start"
+msgstr "Montar los directorios seleccionados en el arranque"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:68
+msgid "Select icon theme"
+msgstr "Seleccionar tema de iconos"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:71
+msgid "Normal"
+msgstr "Normal"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:73
+msgid "Light"
+msgstr "Claro"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/preferences.py:75
+msgid "Dark"
+msgstr "Oscuro"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/crypto.py:114
+msgid "Add new encrytped folder"
+msgstr "Añadir nuevo directorio cifrado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/crypto.py:122
+msgid "Remove encrytped folder from indicator but not delete"
+msgstr "Quitar el directorio cifrado del indicador sin borrarlo"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/crypto.py:130
+msgid "Edit encrypted folder properties"
+msgstr "Edita las propiedades de los directorios cifrados"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/crypto.py:138
+msgid "Import encrypted folder to indicator"
+msgstr "Importar directorios cifrados al indicador"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/crypto.py:180
+#, fuzzy, python-format
+msgid ""
+"Are you sure to remove from CryptFolder-Indicator this encrypted\n"
+" folder? %s"
+msgstr ""
+"¿Estás seguro de quitar de CryptFolder-Indicator este directorio\n"
+"cifrado? %s"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:58
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:197
+msgid "Encrypted folder"
+msgstr "Directorio cifrado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:75
+msgid "Mount folder"
+msgstr "Montar directorio"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:92
+msgid "Password"
+msgstr "Contraseña"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:112
+msgid "Mount folder at start"
+msgstr "Montar el directorio en el arranque"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:120
+msgid "Delete decrypted folder on unmount"
+msgstr "Borrar el directorio sin cifrar al desmontar"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:160
+msgid "This folder is not encrypted, I can not import it"
+msgstr "Este directorio no está cifrado, no puedo importarlo"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:170
+msgid "This folder is already encrypted"
+msgstr "Este directorio ya está cifrado"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:188
+msgid "Bad Password"
+msgstr "Contraseña incorrecta"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/src/createenfs.py:204
+msgid "Mount point"
+msgstr "Punto de montaje"
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:12
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:13
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:14
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:15
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:16
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:17
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:18
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:19
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:20
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:21
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:22
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:23
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:24
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:25
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:26
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:27
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:28
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:29
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:30
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:31
+msgid "CryptFolder-Indicator"
+msgstr ""
+
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:32
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:33
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:34
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:35
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:36
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:37
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:38
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:39
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:40
+#: /home/atareao/Dropbox/tp/raring/cryptfolder-indicator/extras-cryptfolder-indicator.desktop.in:41
+#, fuzzy
+msgid "An indicator for crypt folders"
+msgstr "Un indicador para directorios cifrados con encfs"

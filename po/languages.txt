@@ -1,0 +1,10 @@
+es
+en
+fr
+it
+pl
+ru
+ca
+gl
+ast
+de

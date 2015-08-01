@@ -1,0 +1,57 @@
+cryptfolder-indicator (0.5.0-0extras14.04.2) trusty; urgency=low
+
+  * Migrated to Trusty Tahr
+
+ -- Lorenzo Carbonell <atareao@trusty>  Sun, 30 Mar 2014 20:31:03 +0200
+
+cryptfolder-indicator (0.5.0-0extras13.04.7) raring; urgency=low
+
+  * Fixed a little bug
+
+ -- Lorenzo <atareao_r@raring>  Sat, 17 Aug 2013 20:12:29 +0200
+
+cryptfolder-indicator (0.5.0-0extras13.04.6) raring; urgency=low
+
+  * Fixed a bug with autostart
+
+ -- Lorenzo <atareao_r@raring>  Sat, 17 Aug 2013 18:46:51 +0200
+
+cryptfolder-indicator (0.5.0-0extras13.04.5) raring; urgency=low
+
+  * Fixed a bug with unicode
+  * Fixed a bug with icons
+  * Fixed a bug with icon
+  * Fixed a bug with pexpect
+  * Fixed a bug with spanish translation 
+  * Updated translations
+  * Fixed minimal bugs
+  * Added support to BoxCryptor
+  * Fixed bug #1012697 automount
+  * Updated translations
+  * Migrated GnomeKeyring to PyGObject
+  * Configuration is saved to local folder
+  * Fixed some bugs with importing folders
+  * Migrated to oneiric
+  * Updated translations
+  * Fixed a bug with spaces in folder names
+  * Now you can choose if you want remove the folder on unmount encrypted folder
+  * Fixed a bug with TreeView
+  * Fixed a bug with menu label
+  * Fixed a bug with log
+  * Fixed a bug with editing folders
+  * Fixed a bug with log
+  * Fixed some bugs
+  * Migrated to PyGObject
+  * Fixed a bug with passwords
+  * You can see password if you want
+  * You can import encrypted folders
+  * Added two themes for icons
+  * Mount automatically selected folders at start
+  * Fixed a bug with autostart
+  * Fixed a bug with autostart
+  * Updated icons
+  * Automatic unmount on exit
+  * Fixed some bugs
+  * First release
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sat, 11 May 2013 14:46:58 +0200
