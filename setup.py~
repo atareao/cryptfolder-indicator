@@ -22,8 +22,7 @@ import codecs
 DATA_FILES = [
 	('/opt/extras.ubuntu.com/cryptfolder-indicator/bin',glob.glob('bin/*')),
 	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator',glob.glob('src/*.py')),	
-	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator/pexpect',glob.glob('src/pexpect/*.py')),
-	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator/ptyprocess',glob.glob('src/ptyprocess/*.py')),
+	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator/pexpect',glob.glob('src/pexpect/*.py')),	
 	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator',['debian/changelog']),	
 	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator/social',glob.glob('data/social/*.svg')),
 	('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator/icons',glob.glob('data/icons/*.svg')),
