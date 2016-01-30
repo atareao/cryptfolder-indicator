@@ -1,3 +1,10 @@
+cryptfolder-indicator (0.5.0-0extras15.10.1) wily; urgency=medium
+
+  * Upgraded to Wily
+  * Fixed keyring dependencies
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sat, 30 Jan 2016 19:48:13 +0100
+
 cryptfolder-indicator (0.5.0-0extras14.04.2) trusty; urgency=low
 
   * Migrated to Trusty Tahr
