@@ -1,12 +1,9 @@
-#! /usr/bin/python
-# -*- coding: iso-8859-1 -*-
+#!/usr/bin/env python3
+# -*- coding: UTF-8 -*-
 #
-__author__="atareao"
-__date__ ="$29-ene-2011$"
+# This file is part of CryptFolder-Indicator
 #
-# <from numbers to letters.>
-#
-# Copyright (C) 2011 Lorenzo Carbonell
+# Copyright (C) 2011 - 2018 Lorenzo Carbonell Cerezo
 # lorenzo.carbonell.cerezo@gmail.com
 #
 # This program is free software: you can redistribute it and/or modify
@@ -21,109 +18,135 @@ __date__ ="$29-ene-2011$"
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-#
-#
-import os
-from gi.repository import Gtk
-import locale
-import gettext
-import com
-import shutil
-import time
-from configurator import Configuration
 
-locale.setlocale(locale.LC_ALL, '')
-gettext.bindtextdomain(com.APP, com.LANGDIR)
-gettext.textdomain(com.APP)
-_ = gettext.gettext
+import gi
+try:
+    gi.require_version('Gtk', '3.0')
+except Exception as e:
+    print(e)
+    exit(-1)
+from gi.repository import Gtk
+import os
+import com
+from configurator import Configuration
+from boxedswitch import BoxedSwitch
+from com import _
+
+
+def set_autostart(autostart):
+    if os.path.exists(com.FILE_AUTO_START) and\
+            not os.path.islink(com.FILE_AUTO_START):
+        os.remove(com.FILE_AUTO_START)
+    if autostart is True:
+        if not os.path.islink(com.FILE_AUTO_START):
+            os.symlink(com.FILE_AUTO_START_SRC, com.FILE_AUTO_START)
+    else:
+        if os.path.islink(com.FILE_AUTO_START):
+            os.remove(com.FILE_AUTO_START)
+
 
 class Preferences(Gtk.Dialog):
-	def __init__(self):
-		#
-		self.configurator = Configuration()
-		Gtk.Dialog.__init__(self, 'CryptFolder Indicator | '+_('Preferences'),None,Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,Gtk.STOCK_OK, Gtk.ResponseType.ACCEPT))
-		self.set_position(Gtk.WindowPosition.CENTER_ALWAYS)
-		self.set_size_request(500, 150)
-		self.connect('close', self.close_application)
-		self.set_icon_from_file(com.ICON)
-		#
-		self.vbox1 = Gtk.VBox(spacing = 5)
-		self.vbox1.set_border_width(5)
-		self.get_content_area().add(self.vbox1)
-		#
-		self.frame1 = Gtk.Frame()
-		self.vbox1.add(self.frame1)
-		#***************************************************************
-		self.vbox2 = Gtk.VBox(spacing = 5)
-		self.vbox2.set_border_width(5)
-		self.frame1.add(self.vbox2)
-		table1 = Gtk.Table(4,3,True)
-		self.vbox2.add(table1)
-		#
-		self.checkbutton1 = Gtk.CheckButton(_('Autostart'))
-		table1.attach(self.checkbutton1,0,3,0,1)
-		self.checkbutton2 = Gtk.CheckButton(_('Mount selected folders at start'))
-		table1.attach(self.checkbutton2,0,3,1,2)
-		label1 = Gtk.Label(label=_('Select icon theme')+':')
-		label1.set_alignment(0,0.5)
-		table1.attach(label1,0,3,2,3)
-		self.radiobutton0 = Gtk.RadioButton(group=None,label=_('Normal'))
-		table1.attach(self.radiobutton0,0,1,3,4)
-		self.radiobutton1 = Gtk.RadioButton(group=self.radiobutton0,label=_('Light'))
-		table1.attach(self.radiobutton1,1,2,3,4)
-		self.radiobutton2 = Gtk.RadioButton(group=self.radiobutton0,label=_('Dark'))
-		table1.attach(self.radiobutton2,2,3,3,4)
-		#***************************************************************		
-		#
-		self.load_preferences()
-		#
-		self.show_all()
-		
-	def close_application(self, widget, event):
-		self.destroy()
-		
-	def close_ok(self):
-		self.hide()
-		
-	def save(self):
-		filestart = os.path.join(os.getenv("HOME"),".config/autostart/cryptfolder-indicator-autostart.desktop")
-		if self.checkbutton1.get_active():
-			if not os.path.exists(filestart):
-				shutil.copyfile('/opt/extras.ubuntu.com/cryptfolder-indicator/share/cryptfolder-indicator/cryptfolder-indicator-autostart.desktop',filestart)
-		else:		
-			if os.path.exists(filestart):
-				os.remove(filestart)
-		if self.checkbutton2.get_active():
-			self.configurator.set('mount_folders_on_start','yes')
-		else:
-			self.configurator.set('mount_folders_on_start','no')
-		if self.radiobutton0.get_active() == True:
-			option = 'normal'
-		elif self.radiobutton1.get_active() == True:
-			option = 'light'
-		else:
-			option = 'dark'
-		self.configurator.set('theme',option)
-		self.configurator.save()
-		
-			
-	def load_preferences(self):
-		if os.path.exists(os.path.join(os.getenv("HOME"),".config/autostart/cryptfolder-indicator-autostart.desktop")):
-			self.checkbutton1.set_active(True)
-		self.checkbutton2.set_active(self.configurator.get('mount_folders_on_start')=='yes')
-		option = self.configurator.get('theme')
-		if option == 'normal':
-			self.radiobutton0.set_active(True)
-		elif option == 'light':
-			self.radiobutton1.set_active(True)
-		else:
-			self.radiobutton2.set_active(True)
-		
-if __name__ == "__main__":	
-	cm = Preferences()
-	if cm.run() == Gtk.ResponseType.ACCEPT:
-		cm.hide()
-		cm.save()
-	cm.destroy()
-	exit(0)
+    def __init__(self):
+        self.configurator = Configuration()
+        Gtk.Dialog.__init__(self,
+                            'CryptFolder Indicator | ' + _('Preferences'),
+                            None,
+                            Gtk.DialogFlags.MODAL |
+                            Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                            (Gtk.STOCK_CANCEL,
+                             Gtk.ResponseType.REJECT,
+                             Gtk.STOCK_OK,
+                             Gtk.ResponseType.ACCEPT))
+        self.set_position(Gtk.WindowPosition.CENTER_ALWAYS)
+        self.set_size_request(500, 150)
+        self.connect('close', self.close_application)
+        self.set_icon_from_file(com.ICON)
+
+        vbox1 = Gtk.VBox(spacing=5)
+        vbox1.set_border_width(5)
+        self.get_content_area().add(vbox1)
+
+        frame1 = Gtk.Frame()
+        vbox1.add(frame1)
+
+        grid = Gtk.Grid()
+        grid.set_margin_top(10)
+        grid.set_margin_bottom(10)
+        grid.set_margin_left(10)
+        grid.set_margin_right(10)
+        grid.set_column_spacing(5)
+        grid.set_row_spacing(5)
+        frame1.add(grid)
+
+        label = Gtk.Label(_('Autostart'))
+        label.set_alignment(0, 0.5)
+        grid.attach(label, 0, 0, 1, 1)
+
+        self.checkbutton1 = BoxedSwitch()
+        grid.attach(self.checkbutton1, 1, 0, 1, 1)
+
+        label = Gtk.Label(_('Mount selected folders at start'))
+        label.set_alignment(0, 0.5)
+        grid.attach(label, 0, 1, 1, 1)
+
+        self.checkbutton2 = BoxedSwitch()
+        grid.attach(self.checkbutton2, 1, 1, 1, 1)
+
+        label1 = Gtk.Label(label=_('Select icon theme') + ':')
+        label1.set_alignment(0, 0.5)
+        grid.attach(label1, 0, 2, 1, 1)
+        self.radiobutton0 = Gtk.RadioButton(group=None,
+                                            label=_('Normal'))
+        grid.attach(self.radiobutton0, 1, 2, 1, 1)
+        self.radiobutton1 = Gtk.RadioButton(group=self.radiobutton0,
+                                            label=_('Light'))
+        grid.attach(self.radiobutton1, 2, 2, 1, 1)
+        self.radiobutton2 = Gtk.RadioButton(group=self.radiobutton0,
+                                            label=_('Dark'))
+        grid.attach(self.radiobutton2, 3, 2, 1, 1)
+
+        self.load_preferences()
+        self.show_all()
+
+    def close_application(self, widget, event):
+        self.destroy()
+
+    def close_ok(self):
+        self.hide()
+
+    def save(self):
+        set_autostart(self.checkbutton1.get_active())
+        self.configurator.set('mount_folders_on_start',
+                              self.checkbutton2.get_active())
+        if self.radiobutton0.get_active() is True:
+            option = 'normal'
+        elif self.radiobutton1.get_active()is True:
+            option = 'light'
+        else:
+            option = 'dark'
+        self.configurator.set('theme', option)
+        self.configurator.save()
+
+    def load_preferences(self):
+        if os.path.exists(com.FILE_AUTO_START) and\
+                not os.path.islink(com.FILE_AUTO_START):
+            os.remove(com.FILE_AUTO_START)
+        self.checkbutton1.set_active(os.path.islink(com.FILE_AUTO_START))
+        self.checkbutton2.set_active(
+            self.configurator.get('mount_folders_on_start'))
+        option = self.configurator.get('theme')
+        if option == 'normal':
+            self.radiobutton0.set_active(True)
+        elif option == 'light':
+            self.radiobutton1.set_active(True)
+        else:
+            self.radiobutton2.set_active(True)
+
+
+if __name__ == "__main__":
+    cm = Preferences()
+    if cm.run() == Gtk.ResponseType.ACCEPT:
+        cm.hide()
+        cm.save()
+    cm.destroy()
+    exit(0)

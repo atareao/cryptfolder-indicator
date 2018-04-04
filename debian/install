@@ -1,0 +1,5 @@
+data/icons/*.svg /usr/share/cryptfolder-indicator/icons
+src/*.py /usr/share/cryptfolder-indicator
+bin/* /usr/bin
+data/cryptfolder-indicator.desktop /usr/share/applications
+data/cryptfolder-indicator-autostart.desktop /usr/share/cryptfolder-indicator

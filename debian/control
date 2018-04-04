@@ -2,20 +2,22 @@ Source: cryptfolder-indicator
 Section: utils
 Priority: extra
 Maintainer: Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
-Build-Depends: debhelper (>= 8), python, python-distutils-extra, python-polib
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
 Homepage: http://www.atareao.es
 
 Package: cryptfolder-indicator
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends},
+	python3,
+	python3-gi,
 	gir1.2-gtk-3.0,
 	gir1.2-gdkpixbuf-2.0,
 	gir1.2-appindicator3-0.1,
 	gir1.2-notify-0.7,
 	gir1.2-gnomekeyring-1.0,
-	encfs
-Description: Manage crypt folders
- Cryptfolder-Indicator is a simple application to manage encfs crypt
+	cryfs
+Description: Manage crypt folders with CryFS
+ Cryptfolder-Indicator is a simple application to manage CryFS crypt
  folders. You can forgot your passwords becouse Crypfolder will manage
  them for you using Gnome Keyring to store them.

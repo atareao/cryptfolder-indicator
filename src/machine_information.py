@@ -1,13 +1,9 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding: UTF-8 -*-
 #
-__author__='Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>'
-__date__ ='$23/09/2011'
+# This file is part of CryptFolder-Indicator
 #
-# Report Ubuntu and Machine information
-# Adding keybiding
-#
-# Copyright (C) 2010 Lorenzo Carbonell
+# Copyright (C) 2011 - 2018 Lorenzo Carbonell Cerezo
 # lorenzo.carbonell.cerezo@gmail.com
 #
 # This program is free software: you can redistribute it and/or modify
@@ -22,26 +18,53 @@ __date__ ='$23/09/2011'
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-#
-#
 
+import re
 import shlex
 import subprocess
 
-def ejecuta(comando):
-	args = shlex.split(comando)
-	p = subprocess.Popen(args, bufsize=10000, stdout=subprocess.PIPE)
-	valor = p.communicate()[0]
-	return valor
-	
+
+def run(comando):
+    args = shlex.split(comando)
+    p = subprocess.Popen(args, bufsize=10000, stdout=subprocess.PIPE)
+    valor = p.communicate()[0].decode('utf-8')
+    return valor
+
+
+class DistroInfo():
+    def __init__(self):
+        self.architecture = run('uname -m')
+        test_str = run('lsb_release -a')
+        regex = r'Distributor\s*ID:\s*(.*)\nDescription:\s*(.*)\
+Release:\s*(.*)\nCodename:\s*(.*)'
+        matches = re.search(regex, test_str, re.M | re.I)
+        if matches is not None:
+            self.distributor = matches.group(1)
+            self.description = matches.group(2)
+            self.release = matches.group(3)
+            self.codename = matches.group(4)
+        else:
+            self.distributor = ''
+            self.description = ''
+            self.release = ''
+            self.codename = ''
+
+    def __str__(self):
+        information = 'Distributor: %s\n' % self.distributor
+        information += 'Description: %s\n' % self.description
+        information += 'Release: %s\n' % self.release
+        information += 'Codename: %s\n' % self.codename
+        information += 'Architecture: %s' % self.architecture
+        return information
+
+
 def get_information():
-	information = '#####################################################\n'
-	information += ejecuta('lsb_release -a').decode()
-	information += 'Version:\t%s'%ejecuta('uname -m').decode()
-	information += '#####################################################\n'
-	return information
-	
-if __name__=='__main__':
-	print(get_information())
-	exit(0)
+    information = '#####################################################\n'
+    information += str(DistroInfo())
+    information += '#####################################################\n'
+    return information
+
+
+if __name__ == '__main__':
+    print(get_information())
+    exit(0)
